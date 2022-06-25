@@ -14,7 +14,7 @@
     "pixelsRounding": false,
     "projectUuid": "91096a50-c89b-4c77-a9d9-c4383ef34532",
     "scaleMode": "nearest",
-    "sizeOnStartupMode": "adaptHeight",
+    "sizeOnStartupMode": "",
     "templateSlug": "",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
@@ -23,7 +23,7 @@
     "author": "Marcus Sanatan",
     "windowWidth": 1280,
     "windowHeight": 720,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "/Users/marcussanatan/Projects/gdevelop/builds/journey",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -246,17 +246,16 @@
       "objectsGroups": [],
       "variables": [
         {
-          "folded": true,
-          "name": "NarrativeText",
-          "type": "string",
-          "value": ""
+          "name": "GameOver",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
         {
           "angle": 0,
           "customSize": true,
-          "height": 240,
+          "height": 176,
           "layer": "",
           "locked": false,
           "name": "TitleText",
@@ -335,14 +334,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 16,
           "layer": "",
           "locked": false,
           "name": "Player",
           "persistentUuid": "d5657534-84f3-400a-8151-b721e488c24f",
-          "width": 0,
-          "x": 96,
+          "width": 16,
+          "x": 80,
           "y": 624,
           "zOrder": 5,
           "numberProperties": [],
@@ -592,14 +591,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 48,
+          "height": 32,
           "layer": "",
           "locked": false,
           "name": "Platform",
           "persistentUuid": "60c74af1-097f-45c6-b46a-04cd6172c75a",
           "width": 32,
           "x": 160,
-          "y": 432,
+          "y": 448,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -880,18 +879,149 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 261,
+          "height": 192,
           "layer": "",
           "locked": false,
           "name": "NarrativeText",
           "persistentUuid": "b95baaa6-2ee0-42e7-9190-b634786677a2",
           "width": 432,
           "x": 832,
-          "y": 336,
+          "y": 304,
           "zOrder": 41,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "6f9f8333-c349-410c-a265-a3d4c7721823",
+          "width": 112,
+          "x": 144,
+          "y": 624,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "ccac6105-aae8-4cf5-a808-f0b464340cd4",
+          "width": 256,
+          "x": 320,
+          "y": 592,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "785b7bf3-6651-4108-968c-bb685e004f37",
+          "width": 64,
+          "x": 400,
+          "y": 480,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "d0aabb8b-ae64-42bc-acb7-e1d95e87c20c",
+          "width": 48,
+          "x": 80,
+          "y": 624,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "03ae8cca-7c20-46d8-8601-8b56ac34d4ce",
+          "width": 208,
+          "x": 80,
+          "y": 480,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 48,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "dd1c4708-037f-4922-8ecc-266f8ae49dea",
+          "width": 64,
+          "x": 208,
+          "y": 304,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 5
+            }
+          ]
         },
         {
           "angle": 0,
@@ -900,11 +1030,165 @@
           "layer": "",
           "locked": false,
           "name": "NarrativeCollider",
-          "persistentUuid": "6f9f8333-c349-410c-a265-a3d4c7721823",
+          "persistentUuid": "41973d5d-217a-4fe1-a2c0-4b3d1fb7b62c",
           "width": 0,
-          "x": 144,
-          "y": 624,
-          "zOrder": 42,
+          "x": 560,
+          "y": 240,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "a8253a00-fb67-490d-897f-54cfa4e2aa69",
+          "width": 48,
+          "x": 496,
+          "y": 224,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "640ac2d4-3d7d-4d02-ac89-d93f64cba509",
+          "width": 48,
+          "x": 368,
+          "y": 192,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 8
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "e7cc5e62-4eea-44eb-8b7d-5bd138cfa8d2",
+          "width": 48,
+          "x": 240,
+          "y": 160,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 9
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "locked": false,
+          "name": "Goal",
+          "persistentUuid": "dc125e91-2775-46a5-9985-34af52f6b971",
+          "width": 16,
+          "x": 112,
+          "y": 128,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "96ee8769-0118-4e8f-9ccb-6697613b9124",
+          "width": 64,
+          "x": 400,
+          "y": 480,
+          "zOrder": 44,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "NarrativeCollider",
+          "persistentUuid": "5ce83b52-977a-4396-ae19-437e4db1e0a5",
+          "width": 80,
+          "x": 400,
+          "y": 480,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "locked": false,
+          "name": "GameOverText",
+          "persistentUuid": "e5c4e340-3f3b-46fc-aa8f-59bd52c94703",
+          "width": 432,
+          "x": 832,
+          "y": 544,
+          "zOrder": 47,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1170,11 +1454,39 @@
         },
         {
           "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "GameOverText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Thanks for playing. Keep believing",
+          "font": "Kenney Mini.ttf",
+          "characterSize": 36,
+          "color": {
+            "b": 115,
+            "g": 163,
+            "r": 212
+          }
+        },
+        {
+          "assetStoreId": "",
           "name": "NarrativeCollider",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "folded": true,
+              "name": "ColliderId",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -1216,6 +1528,61 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "name": "Setup",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Initialize the game at startup",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Goal"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "NarrativeCollider"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "GameOverText"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "name": "Player",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1238,141 +1605,158 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "KeyPressed"
+                    "value": "SceneVariableAsBoolean"
                   },
                   "parameters": [
-                    "",
-                    "Right"
+                    "GameOver",
+                    "False"
                   ]
                 }
               ],
-              "actions": [
+              "actions": [],
+              "events": [
                 {
-                  "type": {
-                    "value": "FlipX"
-                  },
-                  "parameters": [
-                    "Player",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "FlipX"
-                  },
-                  "parameters": [
-                    "Player",
-                    "yes"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PlatformBehavior::IsOnFloor"
-                  },
-                  "parameters": [
-                    "Player",
-                    "PlatformerObject"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Right"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlipX"
+                      },
+                      "parameters": [
+                        "Player",
+                        ""
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": {
-                    "inverted": true,
-                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
-                  },
-                  "parameters": [
-                    "Player",
-                    "PlatformerObject"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Player",
-                    "\"Idle\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PlatformBehavior::IsJumping"
-                  },
-                  "parameters": [
-                    "Player",
-                    "PlatformerObject"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Player",
-                    "\"Jump\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PlatformBehavior::IsOnFloor"
-                  },
-                  "parameters": [
-                    "Player",
-                    "PlatformerObject"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlipX"
+                      },
+                      "parameters": [
+                        "Player",
+                        "yes"
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": {
-                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
-                  },
-                  "parameters": [
-                    "Player",
-                    "PlatformerObject"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "Player",
+                        "\"Idle\""
+                      ]
+                    }
                   ]
-                }
-              ],
-              "actions": [
+                },
                 {
-                  "type": {
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Player",
-                    "\"Walk\""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsJumping"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "Player",
+                        "\"Jump\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "Player",
+                        "\"Walk\""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -1416,40 +1800,74 @@
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::And"
+                    "value": "CollisionNP"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Player",
-                        ">=",
-                        "112"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Player",
-                        "<",
-                        "256"
-                      ]
-                    }
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "PosY"
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NarrativeCollider",
+                    "ColliderId",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NarrativeText",
+                    "=",
+                    "\"Our dreams are way ahead of us\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
                   },
                   "parameters": [
                     "Player",
-                    ">=",
-                    "608\n"
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NarrativeCollider",
+                    "ColliderId",
+                    "=",
+                    "1"
                   ]
                 }
               ],
@@ -1480,40 +1898,25 @@
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::And"
+                    "value": "CollisionNP"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Player",
-                        ">=",
-                        "320"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Player",
-                        "<",
-                        "592"
-                      ]
-                    }
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "PosY"
+                    "value": "VarObjet"
                   },
                   "parameters": [
-                    "Player",
-                    ">=",
-                    "592"
+                    "NarrativeCollider",
+                    "ColliderId",
+                    "=",
+                    "2"
                   ]
                 }
               ],
@@ -1544,50 +1947,25 @@
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::And"
+                    "value": "CollisionNP"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Player",
-                        ">=",
-                        "400"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Player",
-                        "<",
-                        "480"
-                      ]
-                    }
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "PosY"
+                    "value": "VarObjet"
                   },
                   "parameters": [
-                    "Player",
-                    ">=",
-                    "416"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PosY"
-                  },
-                  "parameters": [
-                    "Player",
-                    "<",
-                    "512"
+                    "NarrativeCollider",
+                    "ColliderId",
+                    "=",
+                    "3"
                   ]
                 }
               ],
@@ -1599,7 +1977,376 @@
                   "parameters": [
                     "NarrativeText",
                     "=",
-                    "\"Mountains of hurdles come our way, but we're determine to get over them\""
+                    "\"Though mountains of hurdles soon come our way\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NarrativeCollider",
+                    "ColliderId",
+                    "=",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NarrativeText",
+                    "=",
+                    "\"We pass them but the peak isn't the end of the journey\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NarrativeCollider",
+                    "ColliderId",
+                    "=",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NarrativeText",
+                    "=",
+                    "\"There are more twists and turns before we reach there\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NarrativeCollider",
+                    "ColliderId",
+                    "=",
+                    "6"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NarrativeText",
+                    "=",
+                    "\"After so much work, things start to align\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NarrativeCollider",
+                    "ColliderId",
+                    "=",
+                    "7"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NarrativeText",
+                    "=",
+                    "\"We may be tired, but the end is in sight\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NarrativeCollider",
+                    "ColliderId",
+                    "=",
+                    "8"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NarrativeText",
+                    "=",
+                    "\"We may be bruised, but the end is in sight\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NarrativeCollider",
+                    "ColliderId",
+                    "=",
+                    "9"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NarrativeText",
+                    "=",
+                    "\"And all the trials we've endured\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Goal",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NarrativeText",
+                    "=",
+                    "\"Finally becomes worth it.\n\nYou made it\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GameOver",
+                    "True"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Player",
+                    "\"Idle\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "GameOverText",
+                    ""
                   ]
                 }
               ]
@@ -1608,6 +2355,58 @@
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "NarrativeCollider",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Goal",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NarrativeText",
+                    "=",
+                    "\"\""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
