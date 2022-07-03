@@ -1246,10 +1246,10 @@
           "effects": [],
           "behaviors": [
             {
+              "acceleration": 1000,
+              "jumpSustainTime": 0.25,
               "name": "PlatformerObject",
               "type": "PlatformBehavior::PlatformerObjectBehavior",
-              "acceleration": 100,
-              "jumpSustainTime": 1,
               "maxSpeed": 100,
               "yGrabOffset": 0,
               "canGoDownFromJumpthru": true,
@@ -1597,6 +1597,111 @@
                 "textG": 0,
                 "textR": 0
               },
+              "comment": "Movement",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Up"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "w"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateJumpKey"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "a"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateLeftKey"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "d"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateRightKey"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
               "comment": "Animations",
               "comment2": ""
             },
@@ -1620,11 +1725,28 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "KeyPressed"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "",
-                        "Right"
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Right"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "d"
+                          ]
+                        }
                       ]
                     }
                   ],
@@ -1645,11 +1767,28 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "KeyPressed"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "",
-                        "Left"
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "a"
+                          ]
+                        }
                       ]
                     }
                   ],
