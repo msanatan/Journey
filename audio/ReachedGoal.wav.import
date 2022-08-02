@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ReachedGoal.wav-5e6bc9562215c91080b83a274887675a.sample"
+
+[deps]
+
+source_file="res://audio/ReachedGoal.wav"
+dest_files=[ "res://.import/ReachedGoal.wav-5e6bc9562215c91080b83a274887675a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
