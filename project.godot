@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Journey"
+run/main_scene="res://scenes/Main.tscn"
 config/icon="res://itchio-cover.png"
 
 [display]
@@ -19,6 +20,8 @@ window/size/width=1920
 window/size/height=1280
 window/size/test_width=1280
 window/size/test_height=853
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [physics]
 
