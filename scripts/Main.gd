@@ -4,6 +4,7 @@ func _on_Goal_game_complete(game_complete_text:String):
     $Player.toggle_game_over()
     $Messages/StoryLabel.text = game_complete_text
     $Messages/GameOverLabel.visible = true
+    $GameOverAudioPlayer.play()
 
 func _on_StoryTrigger01_change_story_text(new_story_text:String):
     $Messages/StoryLabel.text = new_story_text

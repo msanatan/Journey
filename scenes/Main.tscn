@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://fonts/Kenney Mini.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://art/tiles/Platform.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/Main.gd" type="Script" id=5]
 [ext_resource path="res://scenes/StoryTrigger.tscn" type="PackedScene" id=6]
+[ext_resource path="res://audio/ReachedGoal.wav" type="AudioStream" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 54
@@ -154,6 +155,9 @@ story_text = "We may be bruised, but the end is in sight"
 position = Vector2( 432, 360 )
 scale = Vector2( 4, 1 )
 story_text = "And all the trials we've endured"
+
+[node name="GameOverAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
 
 [connection signal="game_complete" from="Goal" to="." method="_on_Goal_game_complete"]
 [connection signal="change_story_text" from="StoryTriggers/StoryTrigger01" to="." method="_on_StoryTrigger01_change_story_text"]
