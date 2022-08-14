@@ -11,6 +11,11 @@ onready var animated_sprite = $AnimatedSprite
 
 var motion = Vector2.ZERO
 var game_over = false
+onready var jump_audio_player = $JumpAudioPlayer
+
+func _ready():
+    randomize()
+
 
 func _physics_process(delta):
     if game_over:
@@ -35,6 +40,8 @@ func _physics_process(delta):
 
         if Input.is_action_just_pressed('up'):
             motion.y = -JUMP_FORCE
+            jump_audio_player.pitch_scale = rand_range(0.8, 1.2)
+            jump_audio_player.play()
     else:
         animated_sprite.play('jump')
         if Input.is_action_just_released('up') and motion.y < -JUMP_FORCE / 2:
