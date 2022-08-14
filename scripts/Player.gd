@@ -10,8 +10,13 @@ export var JUMP_FORCE = 128
 onready var animated_sprite = $AnimatedSprite
 
 var motion = Vector2.ZERO
+var game_over = false
 
 func _physics_process(delta):
+    if game_over:
+        animated_sprite.play('idle')
+        return
+
     var x_input = Input.get_action_strength('right') - Input.get_action_strength('left')
 
     if x_input != 0:
@@ -39,3 +44,7 @@ func _physics_process(delta):
             motion.x = lerp(motion.x, 0, AIR_RESISTANCE)
 
     motion = move_and_slide(motion, Vector2.UP)
+
+
+func toggle_game_over():
+    game_over = true
