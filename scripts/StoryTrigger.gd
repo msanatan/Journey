@@ -6,5 +6,5 @@ export(String, MULTILINE) var story_text = ''
 
 
 func _on_StoryTrigger_body_entered(body:Node):
-    if body.name == 'Player' and body.is_on_floor():
+    if body.name == 'Player':
         emit_signal('change_story_text', story_text)
